@@ -16,6 +16,7 @@ import java.util.Set;
 
 /**
  * @author sn
+ * 解决跨域问题
  */
 @Component
 @WebFilter(urlPatterns = {"/*"}, filterName = "loginAuthFilter")

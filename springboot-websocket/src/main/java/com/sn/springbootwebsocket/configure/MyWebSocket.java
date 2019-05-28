@@ -9,10 +9,12 @@ import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author sn
  * 接受websocket请求路径
+ * ServerEndpoint注解 监听一个WebSocket请求路径
  */
 @ServerEndpoint(value = "/websocket")
 @Component
@@ -21,7 +23,7 @@ public class MyWebSocket {
     /**
      * 保存所有在线socket连接
      */
-    private static Map<String, MyWebSocket> webSocketMap = new LinkedHashMap<>();
+    private static Map<String, MyWebSocket> webSocketMap = new ConcurrentHashMap<>();
 
     /**
      * 记录当前在线数目
@@ -93,7 +95,8 @@ public class MyWebSocket {
      * @throws IOException
      */
     private void sendMessage(String message) throws IOException {
-        this.session.getBasicRemote().sendText(message);
+        // 反转消息
+        this.session.getBasicRemote().sendText("Reversed: " + new StringBuilder(message).reverse().toString());
     }
 
     /**
