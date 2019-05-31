@@ -1,4 +1,4 @@
-package com.sn.springbootwebsocket.configure;
+package com.sn.springbootwebsocket.configure.broadcast;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -8,8 +8,8 @@ import org.springframework.web.socket.server.standard.ServerEndpointExporter;
 /**
  * @author sn
  */
-@Configuration
-@EnableWebSocket
+//@Configuration
+//@EnableWebSocket
 public class WebSocketConfig {
     @Bean
     public ServerEndpointExporter serverEndpointExporter() {
