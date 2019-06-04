@@ -36,6 +36,14 @@
                 <artifactId>jackson-annotations</artifactId>
                 <version>2.9.4</version>
             </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-jpa</artifactId>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -43,5 +51,25 @@
         <module>springboot-websocket</module>
         <module>springboot-java</module>
     </modules>
+
+    <!--以下配置将默认激活-dev.yml配置文件-->
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <!--默认激活-->
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <spring.profiles.active>dev</spring.profiles.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <spring.profiles.active>prod</spring.profiles.active>
+            </properties>
+        </profile>
+    </profiles>
 
 </project>

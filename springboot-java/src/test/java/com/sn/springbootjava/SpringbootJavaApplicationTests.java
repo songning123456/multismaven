@@ -1,5 +1,6 @@
 package com.sn.springbootjava;
 
+import com.sn.springbootjava.config.ServerProperties;
 import com.sn.springbootjava.entity.TestSerializable;
 import com.sn.springbootjava.entity.TestSynchronized;
 import com.sn.springbootjava.service.impl.TestSynchronized2ServiceImpl;
@@ -7,6 +8,7 @@ import com.sn.springbootjava.service.impl.TestSynchronizedServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.TestComponent;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -17,6 +19,9 @@ import java.io.*;
 @SpringBootTest
 @Slf4j
 public class SpringbootJavaApplicationTests {
+
+    @Autowired
+    private ServerProperties serverProperties;
 
     private File file = new File("D:\\haiyan-data\\se.txt");
     private TestSerializable testSerializable = new TestSerializable();
@@ -56,6 +61,16 @@ public class SpringbootJavaApplicationTests {
         testSynchronizedService.run();
         TestSynchronized2ServiceImpl testSynchronized2Service = new TestSynchronized2ServiceImpl(testSynchronized);
         testSynchronized2Service.run();
+    }
+
+    /**
+     * 获取spring-boot yml中的值
+     */
+    @Test
+    public void testProperties() {
+        log.info(this.serverProperties.getApp().getName());
+        log.info(this.serverProperties.getApp().getThreadCount());
+        log.info(this.serverProperties.getApp().getUsers().get(0));
     }
 
 }

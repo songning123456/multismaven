@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: @spring.profiles.active@
+  mvc:
+    throw-exception-if-no-handler-found: true
+  http:
+    multipart:
+      max-file-size: 10MB
+  aop:
+    proxy-target-class: true
+  cache:
+    type: caffeine
+server:
+  error:
+    whitelabel:
+      enabled: false
