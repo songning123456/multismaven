@@ -1,5 +1,7 @@
 package com.sn.springbootjava.controller;
 
+import com.sn.springbootjava.annotation.ControllerAspectAnnotation;
+import com.sn.springbootjava.dto.CommonDTO;
 import com.sn.springbootjava.dto.CourseDTO;
 import com.sn.springbootjava.service.CourseService;
 import lombok.extern.slf4j.Slf4j;
@@ -21,9 +23,11 @@ public class CourseController {
     CourseService courseService;
 
     @RequestMapping("/search-all")
-    public List<CourseDTO> getAllCourse() {
+    @ControllerAspectAnnotation(description = "获取所有课程")
+    public CommonDTO<CourseDTO> getAllCourse() {
+        CommonDTO<CourseDTO> commonDTO = new CommonDTO<>();
         List<CourseDTO> result = courseService.getAllCourse();
-        return result;
+        commonDTO.setData(result);
+        return commonDTO;
     }
-
 }

@@ -3,6 +3,9 @@ package com.sn.springbootjava;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * @author sn
+ */
 @SpringBootApplication
 public class SpringbootJavaApplication {
 

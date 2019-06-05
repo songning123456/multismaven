@@ -22,7 +22,7 @@ public class SpringBeanUtil implements ApplicationContextAware {
         applicationContext = args0;
     }
 
-    public static ApplicationContext getApplicationContext() {
+    private static ApplicationContext getApplicationContext() {
         return applicationContext;
     }
 
@@ -37,11 +37,11 @@ public class SpringBeanUtil implements ApplicationContextAware {
         return getApplicationContext().getBean(name, clazz);
     }
 
-    public static final Object getBean(String beanName) {
+    public static Object getBean(String beanName) {
         return getApplicationContext().getBean(beanName);
     }
 
-    public static final Object getBean(String beanName, String className) throws ClassNotFoundException {
+    public static Object getBean(String beanName, String className) throws ClassNotFoundException {
         Class clz = Class.forName(className);
         return getApplicationContext().getBean(beanName, clz.getClass());
     }

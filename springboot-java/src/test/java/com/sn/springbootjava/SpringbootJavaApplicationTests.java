@@ -33,6 +33,9 @@ public class SpringbootJavaApplicationTests {
     private File file = new File("D:\\haiyan-data\\se.txt");
     private TestSerializable testSerializable = new TestSerializable();
 
+    /**
+     * 测试序列化
+     */
     @Test
     public void serializable() {
         testSerializable.setValue("songNing");
@@ -48,6 +51,9 @@ public class SpringbootJavaApplicationTests {
         }
     }
 
+    /**
+     * 测试反序列化
+     */
     @Test
     public void desSerializable() {
         try {
@@ -61,6 +67,9 @@ public class SpringbootJavaApplicationTests {
         }
     }
 
+    /**
+     * 测试锁
+     */
     @Test
     public void testSynchronized() {
         TestSynchronized testSynchronized = new TestSynchronized();
@@ -85,8 +94,6 @@ public class SpringbootJavaApplicationTests {
      */
     @Test
     public void testSpringBean() {
-        Map<String, Object> map = new HashMap<>();
-        map.put("courseName", "语文");
         List<CourseDTO> courseList = SpringBeanUtil.getBean(CourseServiceImpl.class).getAllCourse();
         System.out.println(courseList);
     }
