@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @author sn
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.sn.springbootjava"})
 public class SpringbootJavaApplication {
 
     public static void main(String[] args) {
