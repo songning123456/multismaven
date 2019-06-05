@@ -1,10 +1,14 @@
 package com.sn.springbootjava;
 
 import com.sn.springbootjava.config.ServerProperties;
+import com.sn.springbootjava.dto.CourseDTO;
+import com.sn.springbootjava.entity.Course;
 import com.sn.springbootjava.entity.TestSerializable;
 import com.sn.springbootjava.entity.TestSynchronized;
+import com.sn.springbootjava.service.impl.CourseServiceImpl;
 import com.sn.springbootjava.service.impl.TestSynchronized2ServiceImpl;
 import com.sn.springbootjava.service.impl.TestSynchronizedServiceImpl;
+import com.sn.springbootjava.util.SpringBeanUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,6 +18,9 @@ import org.springframework.boot.test.context.TestComponent;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.*;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -71,6 +78,17 @@ public class SpringbootJavaApplicationTests {
         log.info(this.serverProperties.getApp().getName());
         log.info(this.serverProperties.getApp().getThreadCount());
         log.info(this.serverProperties.getApp().getUsers().get(0));
+    }
+
+    /**
+     * 普通java对象获取springbean
+     */
+    @Test
+    public void testSpringBean() {
+        Map<String, Object> map = new HashMap<>();
+        map.put("courseName", "语文");
+        List<CourseDTO> courseList = SpringBeanUtil.getBean(CourseServiceImpl.class).getAllCourse();
+        System.out.println(courseList);
     }
 
 }
