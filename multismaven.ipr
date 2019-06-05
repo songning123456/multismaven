@@ -190,6 +190,13 @@
       </item>
     </group>
   </component>
+  <component name="ProjectDictionaryState">
+    <dictionary name="songning">
+      <words>
+        <w>springboot</w>
+      </words>
+    </dictionary>
+  </component>
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/multismaven.iml" filepath="$PROJECT_DIR$/multismaven.iml" />
@@ -424,15 +431,15 @@
         <root url="jar://$USER_HOME$/.m2/repository/junit/junit/4.12/junit-4.12-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: mysql:mysql-connector-java:8.0.16">
+    <library name="Maven: mysql:mysql-connector-java:5.1.39">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.m2/repository/mysql/mysql-connector-java/8.0.16/mysql-connector-java-8.0.16.jar!/" />
+        <root url="jar://$USER_HOME$/.m2/repository/mysql/mysql-connector-java/5.1.39/mysql-connector-java-5.1.39.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$USER_HOME$/.m2/repository/mysql/mysql-connector-java/8.0.16/mysql-connector-java-8.0.16-javadoc.jar!/" />
+        <root url="jar://$USER_HOME$/.m2/repository/mysql/mysql-connector-java/5.1.39/mysql-connector-java-5.1.39-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$USER_HOME$/.m2/repository/mysql/mysql-connector-java/8.0.16/mysql-connector-java-8.0.16-sources.jar!/" />
+        <root url="jar://$USER_HOME$/.m2/repository/mysql/mysql-connector-java/5.1.39/mysql-connector-java-5.1.39-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: net.bytebuddy:byte-buddy-agent:1.9.12">

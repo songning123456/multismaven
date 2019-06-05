@@ -9,9 +9,9 @@ spring:
     serialization:
       WRITE_DATES_AS_TIMESTAMPS: false
   datasource:
-    url: jdbc:mysql://localhost:3306/spring_boot
+    url: jdbc:mysql://localhost:3306/spring_boot?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=false&autoReconnect=true&failOverReadOnly=false
     username: root
-    data-password: root
+    password: root
     driver-class-name: com.mysql.jdbc.Driver
   jpa:
     hibernate:
@@ -22,6 +22,7 @@ spring:
 server:
   port: 9999
 
+#测试注入数据
 info:
   app:
     name: myApplication
