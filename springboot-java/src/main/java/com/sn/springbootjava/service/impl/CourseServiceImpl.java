@@ -6,6 +6,8 @@ import com.sn.springbootjava.repository.CourseRepository;
 import com.sn.springbootjava.service.CourseService;
 import com.sn.springbootjava.service.RedisService;
 import com.sn.springbootjava.util.ClassUtil;
+import com.sn.springbootjava.vo.CommonVO;
+import com.sn.springbootjava.vo.CourseVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,5 +33,13 @@ public class CourseServiceImpl implements CourseService {
         List<CourseDTO> target = new ArrayList<>();
         ClassUtil.populateList(source, target, CourseDTO.class);
         return target;
+    }
+
+    @Override
+    public void addCourse(CommonVO<CourseVO> commonVO) {
+        CourseVO courseVO = commonVO.getCondition();
+        Course course = new Course();
+        ClassUtil.populate(courseVO, course);
+        courseRepository.save(course);
     }
 }
