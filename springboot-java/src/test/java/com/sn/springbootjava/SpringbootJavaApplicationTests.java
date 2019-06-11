@@ -5,6 +5,7 @@ import com.sn.springbootjava.dto.CourseDTO;
 import com.sn.springbootjava.entity.Course;
 import com.sn.springbootjava.entity.TestSerializable;
 import com.sn.springbootjava.entity.TestSynchronized;
+import com.sn.springbootjava.service.ZookeeperService;
 import com.sn.springbootjava.service.impl.CourseServiceImpl;
 import com.sn.springbootjava.service.impl.TestSynchronized2ServiceImpl;
 import com.sn.springbootjava.service.impl.TestSynchronizedServiceImpl;
@@ -29,6 +30,9 @@ public class SpringbootJavaApplicationTests {
 
     @Autowired
     private ServerProperties serverProperties;
+
+    @Autowired
+    private ZookeeperService zookeeperService;
 
     private File file = new File("D:\\haiyan-data\\se.txt");
     private TestSerializable testSerializable = new TestSerializable();
@@ -96,6 +100,19 @@ public class SpringbootJavaApplicationTests {
     public void testSpringBean() {
         List<CourseDTO> courseList = SpringBeanUtil.getBean(CourseServiceImpl.class).getAllCourse();
         System.out.println(courseList);
+    }
+
+    /**
+     * 测试zookeeper
+     */
+    @Test
+    public void testZookeeper() throws Exception {
+        zookeeperService.insertNode();
+        zookeeperService.selectNode();
+        zookeeperService.updateNode();
+        zookeeperService.selectNode();
+        zookeeperService.deleteNode();
+        zookeeperService.watchNode();
     }
 
 }
