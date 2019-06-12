@@ -10,6 +10,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class WebMVCConfig {
 
+
+    /**
+     * 如果取消该注释，一定要打开zookeeper
+     */
     /*@Bean(initMethod = "init")
     public ZKCustor zkCustor() {
         return new ZKCustor();

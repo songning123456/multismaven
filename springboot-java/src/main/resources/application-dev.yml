@@ -9,10 +9,49 @@ spring:
     serialization:
       WRITE_DATES_AS_TIMESTAMPS: false
   datasource:
-    url: jdbc:mysql://localhost:3306/spring_boot?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=false&autoReconnect=true&failOverReadOnly=false
-    username: root
-    password: root
-    driver-class-name: com.mysql.jdbc.Driver
+# 默认配置
+#    url: jdbc:mysql://localhost:3306/spring_boot?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=false&autoReconnect=true&failOverReadOnly=false
+#    username: root
+#    password: root
+#    driver-class-name: com.mysql.jdbc.Driver
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      initial-size: 1
+      min-idle: 1
+      connection-init-sqls: set names utf8mb4
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      use-global-data-source-stat: true
+      filter:
+        wall:
+          config:
+            multi-statement-allow: true
+        stat:
+          log-slow-sql: true
+          slow-sql-millis: 1000
+        slf4j:
+          enabled: true
+          connection-log-enabled: true
+          statement-executable-sql-log-enable: true
+          result-set-log-enabled: false
+      min-evictable-idle-time-millis: 1800000
+      stat-view-servlet:
+        enabled: true
+      rds:
+        maxActive: 10
+        maxOpenPrepareStatements: 10
+      primary-data:
+        url: jdbc:mysql://localhost:3306/spring_boot?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=false&autoReconnect=true&failOverReadOnly=false
+        username: root
+        password: root
+      ads:
+        maxActive: 10
+        maxOpenPrepareStatements: 10
+      second-data:
+        url: jdbc:mysql://localhost:3306/spring_durid?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=false&autoReconnect=true&failOverReadOnly=false
+        username: root
+        password: root
   jpa:
     hibernate:
       ddl-auto: update
@@ -20,8 +59,8 @@ spring:
     show-sql: true
   redis:
     database: 1   # 数据库索引（默认为0）
-    host: 172.16.232.173
-    port: 6380
+    host: 127.0.0.1
+    port: 6379
     password:
     jedis:
       pool:

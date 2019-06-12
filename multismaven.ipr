@@ -193,6 +193,7 @@
   <component name="ProjectDictionaryState">
     <dictionary name="songning">
       <words>
+        <w>cors</w>
         <w>springbean</w>
         <w>springboot</w>
       </words>
@@ -243,6 +244,28 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$USER_HOME$/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.alibaba:druid-spring-boot-starter:1.1.17">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.m2/repository/com/alibaba/druid-spring-boot-starter/1.1.17/druid-spring-boot-starter-1.1.17.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$USER_HOME$/.m2/repository/com/alibaba/druid-spring-boot-starter/1.1.17/druid-spring-boot-starter-1.1.17-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.m2/repository/com/alibaba/druid-spring-boot-starter/1.1.17/druid-spring-boot-starter-1.1.17-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.alibaba:druid:1.1.17">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.m2/repository/com/alibaba/druid/1.1.17/druid-1.1.17.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$USER_HOME$/.m2/repository/com/alibaba/druid/1.1.17/druid-1.1.17-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.m2/repository/com/alibaba/druid/1.1.17/druid-1.1.17-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.0">
@@ -320,6 +343,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$USER_HOME$/.m2/repository/com/fasterxml/classmate/1.4.0/classmate-1.4.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.google.guava:guava:20.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.m2/repository/com/google/guava/guava/20.0/guava-20.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$USER_HOME$/.m2/repository/com/google/guava/guava/20.0/guava-20.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.m2/repository/com/google/guava/guava/20.0/guava-20.0-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: com.jayway.jsonpath:json-path:2.4.0">
@@ -432,6 +466,17 @@
         <root url="jar://$USER_HOME$/.m2/repository/io/netty/netty-transport/4.1.36.Final/netty-transport-4.1.36.Final-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: io.netty:netty:3.10.5.Final">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.m2/repository/io/netty/netty/3.10.5.Final/netty-3.10.5.Final.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$USER_HOME$/.m2/repository/io/netty/netty/3.10.5.Final/netty-3.10.5.Final-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.m2/repository/io/netty/netty/3.10.5.Final/netty-3.10.5.Final-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: io.projectreactor:reactor-core:3.2.9.RELEASE">
       <CLASSES>
         <root url="jar://$USER_HOME$/.m2/repository/io/projectreactor/reactor-core/3.2.9.RELEASE/reactor-core-3.2.9.RELEASE.jar!/" />
@@ -509,6 +554,17 @@
         <root url="jar://$USER_HOME$/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: jline:jline:0.9.94">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.m2/repository/jline/jline/0.9.94/jline-0.9.94.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$USER_HOME$/.m2/repository/jline/jline/0.9.94/jline-0.9.94-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.m2/repository/jline/jline/0.9.94/jline-0.9.94-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: junit:junit:4.12">
       <CLASSES>
         <root url="jar://$USER_HOME$/.m2/repository/junit/junit/4.12/junit-4.12.jar!/" />
@@ -518,6 +574,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$USER_HOME$/.m2/repository/junit/junit/4.12/junit-4.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: log4j:log4j:1.2.16">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.m2/repository/log4j/log4j/1.2.16/log4j-1.2.16.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$USER_HOME$/.m2/repository/log4j/log4j/1.2.16/log4j-1.2.16-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.m2/repository/log4j/log4j/1.2.16/log4j-1.2.16-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: mysql:mysql-connector-java:5.1.39">
@@ -575,6 +642,39 @@
         <root url="jar://$USER_HOME$/.m2/repository/net/minidev/json-smart/2.3/json-smart-2.3-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: org.apache.curator:curator-client:4.0.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.m2/repository/org/apache/curator/curator-client/4.0.0/curator-client-4.0.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$USER_HOME$/.m2/repository/org/apache/curator/curator-client/4.0.0/curator-client-4.0.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.m2/repository/org/apache/curator/curator-client/4.0.0/curator-client-4.0.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.curator:curator-framework:4.0.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.m2/repository/org/apache/curator/curator-framework/4.0.0/curator-framework-4.0.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$USER_HOME$/.m2/repository/org/apache/curator/curator-framework/4.0.0/curator-framework-4.0.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.m2/repository/org/apache/curator/curator-framework/4.0.0/curator-framework-4.0.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.curator:curator-recipes:4.0.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.m2/repository/org/apache/curator/curator-recipes/4.0.0/curator-recipes-4.0.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$USER_HOME$/.m2/repository/org/apache/curator/curator-recipes/4.0.0/curator-recipes-4.0.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.m2/repository/org/apache/curator/curator-recipes/4.0.0/curator-recipes-4.0.0-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: org.apache.logging.log4j:log4j-api:2.11.2">
       <CLASSES>
         <root url="jar://$USER_HOME$/.m2/repository/org/apache/logging/log4j/log4j-api/2.11.2/log4j-api-2.11.2.jar!/" />
@@ -628,6 +728,28 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$USER_HOME$/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.19/tomcat-embed-websocket-9.0.19-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.yetus:audience-annotations:0.5.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.m2/repository/org/apache/yetus/audience-annotations/0.5.0/audience-annotations-0.5.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$USER_HOME$/.m2/repository/org/apache/yetus/audience-annotations/0.5.0/audience-annotations-0.5.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.m2/repository/org/apache/yetus/audience-annotations/0.5.0/audience-annotations-0.5.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.zookeeper:zookeeper:3.4.11">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.m2/repository/org/apache/zookeeper/zookeeper/3.4.11/zookeeper-3.4.11.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$USER_HOME$/.m2/repository/org/apache/zookeeper/zookeeper/3.4.11/zookeeper-3.4.11-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.m2/repository/org/apache/zookeeper/zookeeper/3.4.11/zookeeper-3.4.11-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.aspectj:aspectjweaver:1.9.4">
@@ -837,6 +959,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$USER_HOME$/.m2/repository/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.slf4j:slf4j-log4j12:1.7.26">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.m2/repository/org/slf4j/slf4j-log4j12/1.7.26/slf4j-log4j12-1.7.26.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$USER_HOME$/.m2/repository/org/slf4j/slf4j-log4j12/1.7.26/slf4j-log4j12-1.7.26-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.m2/repository/org/slf4j/slf4j-log4j12/1.7.26/slf4j-log4j12-1.7.26-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.1.5.RELEASE">

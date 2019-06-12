@@ -1,6 +1,8 @@
 package com.sn.springbootjava.controller;
 
 import com.sn.springbootjava.annotation.ControllerAspectAnnotation;
+import com.sn.springbootjava.annotation.DataSourceAnnotation;
+import com.sn.springbootjava.constant.DataSourceTypeConstant;
 import com.sn.springbootjava.dto.CommonDTO;
 import com.sn.springbootjava.dto.CourseDTO;
 import com.sn.springbootjava.entity.Course;
@@ -34,6 +36,7 @@ public class CourseController {
 
     @RequestMapping("/search-all")
     @ControllerAspectAnnotation(description = "获取所有课程")
+    @DataSourceAnnotation(DataSourceTypeConstant.FIRST_FOLLOWER)
     public CommonDTO<CourseDTO> getAllCourse() {
         CommonDTO<CourseDTO> commonDTO = new CommonDTO<>();
         List<CourseDTO> result = courseService.getAllCourse();
