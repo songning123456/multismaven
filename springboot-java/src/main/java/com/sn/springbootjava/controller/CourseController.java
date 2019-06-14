@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -52,5 +53,16 @@ public class CourseController {
         ClassUtil.populate(courseVO, course);
         coursePublishService.register(course);
         return new CommonDTO<>();
+    }
+
+    @PostMapping("/http-convert")
+    @ControllerAspectAnnotation(description = "转换流")
+    public CommonDTO<CourseDTO> convertStream() {
+        CommonDTO<CourseDTO> commonDTO = new CommonDTO<>();
+        CourseDTO courseDTO = new CourseDTO();
+        courseDTO.setId(8);
+        courseDTO.setCourseName("其他");
+        commonDTO.setData(Arrays.asList(courseDTO));
+        return commonDTO;
     }
 }
