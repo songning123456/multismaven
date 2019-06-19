@@ -11,7 +11,7 @@ import org.springframework.http.converter.HttpMessageConverter;
 import java.nio.charset.Charset;
 
 /**
- * 转换默认值
+ * 转换默认值(序列化时使用fastJson)
  *
  * @author sn
  */

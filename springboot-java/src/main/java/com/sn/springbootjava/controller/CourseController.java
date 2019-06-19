@@ -65,4 +65,15 @@ public class CourseController {
         commonDTO.setData(Arrays.asList(courseDTO));
         return commonDTO;
     }
+
+    @PostMapping("/xss")
+    @ControllerAspectAnnotation(description = "测试xss攻击json格式")
+    public CommonDTO<CourseDTO> testXss(@RequestBody CommonVO<CourseVO> commonVO) {
+        CourseVO courseVO = commonVO.getCondition();
+        CourseDTO courseDTO = new CourseDTO();
+        CommonDTO<CourseDTO> commonDTO = new CommonDTO<>();
+        ClassUtil.populate(courseVO, courseDTO);
+        commonDTO.setData(Arrays.asList(courseDTO));
+        return commonDTO;
+    }
 }
