@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequestWrapper;
 public class XssAndSqlHttpServletRequestWrapper extends HttpServletRequestWrapper {
     private HttpServletRequest request;
 
-    private XssAndSqlHttpServletRequestWrapper(HttpServletRequest request) {
+    public XssAndSqlHttpServletRequestWrapper(HttpServletRequest request) {
         super(request);
         this.request = request;
     }

@@ -25,7 +25,7 @@ public class ClassUtil {
         Method[] srcMethods = src.getClass().getMethods();
         Method[] targetMethods = target.getClass().getMethods();
 
-        if (!map.isEmpty()) {
+        if (!map.isEmpty() && map.containsKey(src.getClass().getSimpleName())) {
             for (Field field : target.getClass().getDeclaredFields()) {
                 try {
                     String getKey = "get-" + field.getName();
@@ -65,6 +65,8 @@ public class ClassUtil {
                     }
                 }
             }
+            // 存储类类型，做判断是否可以走缓存
+            map.put(src.getClass().getSimpleName(), null);
         }
         return target;
     }
