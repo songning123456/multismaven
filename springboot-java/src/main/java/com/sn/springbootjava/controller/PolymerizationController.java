@@ -13,10 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
+import java.util.concurrent.*;
 
 /**
  * @author sn
@@ -35,7 +32,7 @@ public class PolymerizationController {
     @ControllerAspectAnnotation(description = "多线程测试聚合")
     public CommonDTO<PolymerizationDTO> polymerizationAll() throws Exception {
         CommonDTO<PolymerizationDTO> commonDTO = new CommonDTO<>();
-        ExecutorService executorService = Executors.newFixedThreadPool(2);
+        ExecutorService executorService = new ThreadPoolExecutor(2, 20, 30, TimeUnit.SECONDS, new LinkedBlockingDeque<>(50), new ThreadPoolExecutor.AbortPolicy());
         CountDownLatch countDownLatch = new CountDownLatch(2);
         Future<List<CourseDTO>> courseDTOFuture = executorService.submit(() -> {
             try {
